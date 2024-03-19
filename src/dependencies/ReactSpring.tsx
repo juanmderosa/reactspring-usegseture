@@ -90,6 +90,14 @@ export const Deck = () => {
             style={{
               backgroundImage: `url(${cards[i]})`,
             }}
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "https://www.infobae.com/?noredirect";
+              link.setAttribute("target", "_blank");
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
           />
         </animated.div>
       ))}
